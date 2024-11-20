@@ -1,0 +1,5 @@
+restart from 12000
+DATE: 2024-11-03
+TIME: 16:50:51
+ reading user weak rate file /home/u16/neevshah/Software/mesa-24.08.1/data/rates_data/rate_tables/S13_r_be7_wk_li7.h5
+ version_number r24.08.1

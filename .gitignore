@@ -1,0 +1,8 @@
+# Exclude folders starting with LOGS
+LOGS*/
+png/
+photos/
+
+# Exclude files ending with .mod and .data
+*.mod
+*.data
