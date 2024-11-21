@@ -178,7 +178,7 @@ delta_lgL_hard_limit = 0.1d0
 delta_lgTeff_limit = 0.008d0
 delta_lgTeff_hard_limit = 0.01d0
 
-delta_lgT_cntr_limit   = 0.005d0   ! default 0.01
+delta_lgT_cntr_limit   = 0.01 !0.005d0   ! default 0.01
 delta_lgT_limit = 0.025d0         ! default 0.5
 delta_lgRho_cntr_limit = 0.025d0   ! default 0.05
 delta_lgRho_limit = 0.5d0          ! default 1.0
