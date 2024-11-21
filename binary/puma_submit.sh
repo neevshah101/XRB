@@ -21,4 +21,4 @@ folders=(m1_60_m2_40_p_6_wind_BjorklundDecin_Puma_1)
 # Navigate to the appropriate folder
 cd /groups/mrenzo/Neev/Projects/XRB/binary/${folders[$SLURM_ARRAY_TASK_ID]}
 ./clean && ./mk
-./re 29000
+./re 28000
