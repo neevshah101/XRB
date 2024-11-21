@@ -155,7 +155,7 @@ star_history_txt_format = '(a32, 1x)'
 
 
 ! time step resolution on fuel depletion
-delta_lg_XH_cntr_limit = 0.01d0
+delta_lg_XH_cntr_limit = 0.05d0 !0.01d0
 delta_lg_XH_cntr_max   = 0.0d0
 delta_lg_XH_cntr_min   = -4.0d0
 delta_lg_XH_cntr_hard_limit = 0.02d0
@@ -172,7 +172,7 @@ delta_lg_XO_cntr_max   = 0.0d0
 delta_lg_XO_cntr_min   = -3.0d0
 delta_lg_XO_cntr_hard_limit = 0.02d0
 
-delta_lgL_limit = 0.01d0
+delta_lgL_limit = 0.1 !0.01d0
 delta_lgL_hard_limit = 0.1d0
 
 delta_lgTeff_limit = 0.008d0
@@ -182,13 +182,13 @@ delta_lgT_cntr_limit   = 0.005d0   ! default 0.01
 delta_lgT_limit = 0.025d0         ! default 0.5
 delta_lgRho_cntr_limit = 0.025d0   ! default 0.05
 delta_lgRho_limit = 0.5d0          ! default 1.0
-delta_lgL_nuc_limit = 1d-2
+delta_lgL_nuc_limit = 1d-1 !1d-2
 
-delta_lgL_He_limit = 0.01d0
+delta_lgL_He_limit = 0.1d0 !0.01d0
 delta_lgL_He_hard_limit = 0.025d0
 delta_HR_ds_Teff = 1d-5
 
-delta_lgL_H_limit = 0.01d0
+delta_lgL_H_limit = 0.1d0 #0.01d0
 delta_lgL_H_hard_limit = 0.025d0
 
 
@@ -205,4 +205,6 @@ min_D_mix=1d-2
 
 ! when_to_stop_rtol = 1d-2
 ! when_to_stop_atol = 1d-2
+
+
 / ! end of controls namelist

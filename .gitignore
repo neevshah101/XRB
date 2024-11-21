@@ -6,3 +6,4 @@ photos/
 # Exclude files ending with .mod and .data
 *.mod
 *.data
+*.out
