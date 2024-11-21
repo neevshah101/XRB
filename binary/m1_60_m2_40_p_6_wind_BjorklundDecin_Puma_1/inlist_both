@@ -206,8 +206,8 @@ min_D_mix=1d-2
 ! when_to_stop_rtol = 1d-2
 ! when_to_stop_atol = 1d-2
 
-adjust_J_q_limit = 0.98
-adjust_J_q_hard_limit = 0.97
+adjust_J_q_limit = 0.93
+adjust_J_q_hard_limit = 0.9
 
 
 / ! end of controls namelist
