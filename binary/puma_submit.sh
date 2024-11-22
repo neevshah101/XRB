@@ -8,7 +8,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=16
 #SBATCH --time=72:00:00
-#SBATCH -o mass_%A_%a.out
+#SBATCH -o no_tide_%A_%a.out
 #SBATCH --array=0-0
 # --------------------
 ### Code Section
@@ -16,9 +16,9 @@
 export OMP_NUM_THREADS=16
 
 # Array of folder names
-folders=(m1_60_m2_40_p_6_wind_BjorklundDecin_Puma_1)
+folders=(m1_60_m2_40_p_6_BD_no_tide)
 
 # Navigate to the appropriate folder
 cd /groups/mrenzo/Neev/Projects/XRB/binary/${folders[$SLURM_ARRAY_TASK_ID]}
 ./clean && ./mk
-./re 28000
+./re 22000
