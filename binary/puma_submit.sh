@@ -16,7 +16,7 @@
 export OMP_NUM_THREADS=16
 
 # Array of folder names
-folders=(m1_60_m2_40_p_6_BD_inc_mass_1)
+folders=(m1_60_m2_40_p_6_BD_dec_mass_1)
 
 # Navigate to the appropriate folder
 cd /groups/mrenzo/Neev/Projects/XRB/binary/${folders[$SLURM_ARRAY_TASK_ID]}
