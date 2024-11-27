@@ -2,6 +2,8 @@
 LOGS*/
 png/
 photos/
+binary/
+star/
 
 # Exclude files ending with .mod and .data
 *.mod
