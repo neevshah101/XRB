@@ -141,7 +141,7 @@ terminal_interval = 1
 ! resolution
 ! time
 min_timestep_limit = 1e-10 !sec ! 1e-10 !to be able to reach CC
-varcontrol_target = 1d-4
+varcontrol_target = 1d-3
 max_timestep_factor = 1.05d0
 retry_hold = 2
 min_J_div_delta_J = 5d0
@@ -184,8 +184,8 @@ delta_lgRho_cntr_limit = 0.025d0   ! default 0.05
 delta_lgRho_limit = 0.5d0          ! default 1.0
 delta_lgL_nuc_limit = 1d-2
 
-delta_lgL_He_limit = 0.03d0
-delta_lgL_He_hard_limit = 0.05d0
+delta_lgL_He_limit = 0.05d0
+delta_lgL_He_hard_limit = 0.1d0
 delta_HR_ds_Teff = 1d-5
 
 delta_lgL_H_limit = 0.01d0
