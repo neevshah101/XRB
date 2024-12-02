@@ -206,7 +206,7 @@ min_D_mix=1d-2
 ! when_to_stop_rtol = 1d-2
 ! when_to_stop_atol = 1d-2
 
-hydro_mtx_min_allowed_logT = 1d1
-hydro_mtx_min_allowed_logRho = -1d1
+hydro_mtx_min_allowed_logT = 1d-1
+hydro_mtx_min_allowed_logRho = -1d3
 
 / ! end of controls namelist
