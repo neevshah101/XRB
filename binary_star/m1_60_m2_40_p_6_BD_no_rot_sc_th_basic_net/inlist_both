@@ -78,7 +78,7 @@ Bjorklund_scaling_factor = 1.0
 mdot_omega_power = 0.43d0
 
 ! mixing
-use_ledoux_criterion = .true.
+use_ledoux_criterion = .false.
 mixing_length_alpha = 1.5d0
 alpha_semiconvection = 0.0d0 !1.0d0 !1.0d0
 thermohaline_coeff = 0.0d0 !1.0d0 !1.0d0
