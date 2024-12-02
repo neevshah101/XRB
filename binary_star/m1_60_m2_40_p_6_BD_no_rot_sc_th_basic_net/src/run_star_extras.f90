@@ -385,8 +385,8 @@ contains
     names(8) = 'envelope_binding_energy'
     vals(8) = total_env_binding_E
 
-!    names(9) = 'total_moment_of_inertia'
-!    MoI = 0.0d0
+    names(9) = "MOI"
+    MoI = 0.0d0
 !    if(.not.s% rotation_flag)then
 !       do i=s% nz, 2, -1
 !          MoI = MoI + 0.4d0*s% dm_bar(i)*(pow5(s% r(i)) - pow5(s% r(i-1)) )/(pow3(s% r(i)) - pow3(s% r(i-1)))
@@ -395,7 +395,7 @@ contains
 !       MoI = dot_product(s% dm_bar(1:s% nz), s% i_rot(1:s% nz))
 !    endif
 
-!    vals(9) = MoI
+    vals(9) = MoI
 
     names(10) = "spin_parameter"
     vals(10) = clight * s% total_angular_momentum/( standard_cgrav * s% m(1) * s% m(1) )
