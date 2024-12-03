@@ -78,7 +78,7 @@ Bjorklund_scaling_factor = 1.0
 mdot_omega_power = 0.43d0
 
 ! mixing
-use_ledoux_criterion = .false.
+use_ledoux_criterion = .true.
 mixing_length_alpha = 1.5d0
 alpha_semiconvection = 0.0d0 !1.0d0 !1.0d0
 thermohaline_coeff = 0.0d0 !1.0d0 !1.0d0
@@ -141,7 +141,7 @@ terminal_interval = 1
 ! resolution
 ! time
 min_timestep_limit = 1e-10 !sec ! 1e-10 !to be able to reach CC
-varcontrol_target = 1d-3
+varcontrol_target = 1d-4
 max_timestep_factor = 1.05d0
 retry_hold = 2
 min_J_div_delta_J = 5d0
@@ -184,8 +184,8 @@ delta_lgRho_cntr_limit = 0.025d0   ! default 0.05
 delta_lgRho_limit = 0.5d0          ! default 1.0
 delta_lgL_nuc_limit = 1d-2
 
-delta_lgL_He_limit = 0.05d0
-delta_lgL_He_hard_limit = 0.1d0
+delta_lgL_He_limit = 0.03d0
+delta_lgL_He_hard_limit = 0.05d0
 delta_HR_ds_Teff = 1d-5
 
 delta_lgL_H_limit = 0.01d0
@@ -206,7 +206,65 @@ min_D_mix=1d-2
 ! when_to_stop_rtol = 1d-2
 ! when_to_stop_atol = 1d-2
 
-hydro_mtx_min_allowed_logT = 1d-1
-hydro_mtx_min_allowed_logRho = -1d3
+! FOR DEBUGGING
+
+report_solver_progress = .true. ! set true to see info about solver iterations
+report_ierr = .true. ! if true, produce terminal output when have some internal error
+!stop_for_bad_nums = .true.
+!trace_evolve = .true.
+!fill_arrays_with_NaNs = .true.
+
+!solver_save_photo_call_number = 0
+ ! Saves a photo when solver_call_number = solver_save_photo_call_number - 1
+ ! e.g., useful for testing partials to set solver_call_number = solver_test_partials_call_number - 1
+
+!solver_test_partials_call_number = 4142
+!solver_test_partials_k = 2616
+!solver_test_partials_iter_number = 4
+!solver_test_partials_dx_0 = 1d-6
+!solver_test_partials_var_name = 'o16' ! 'all' or 'lnd', 'lnT', 'lnR', 'L', 'v', etc.    '' means code sets 
+!solver_test_partials_equ_name = 'lnP' ! 'all' or 'dlnE_dt', 'dlnd_dt', 'dlnR_dt', 'equL', etc   '' means code sets 
+!solver_test_partials_sink_name = 'si28' ! iso name to use for "sink" to keep sum = 1
+!solver_test_partials_show_dx_var_name = 'h1'
+
+ ! equ name can also be one of these
+    ! 'lnE', 'lnP', 'grad_ad' to test eos
+    ! 'eps_nuc' to test net
+    ! 'non_nuc_neu' to test neu
+    ! 'gradT', 'mlt_vc' to test mlt
+    ! 'opacity' to test kap
+
+!solver_test_partials_write_eos_call_info = .true.
+
+!solver_test_partials_k_low = -1
+!solver_test_partials_k_high = -1
+
+!solver_test_eos_partials = .true.
+!solver_test_kap_partials = .true.
+!solver_test_net_partials = .true.
+!solver_test_atm_partials = .true.
+
+!report_all_dt_limits = .true.
+!report_solver_dt_info = .true.
+
+!show_mesh_changes = .true.
+!mesh_dump_call_number = 5189
+!okay_to_remesh = .false.
+
+!energy_conservation_dump_model_number = -1
+
+!use_DGESVX_in_bcyclic = .true.
+!use_equilibration_in_DGESVX = .true.
+!report_min_rcond_from_DGESXV = .true.
+
+! solver debugging
+!solver_check_everything = .true.
+
+!solver_epsder_struct = 1d-6
+!solver_epsder_chem = 1d-6
+
+!report_solver_dt_info = .true.
+!report_dX_nuc_drop_dt_limits = .true.
+!report_bad_negative_xa = .true.
 
 / ! end of controls namelist
