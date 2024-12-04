@@ -1098,7 +1098,7 @@ contains
       real(dp), intent(out) :: w5
 
       if (X < 0.4d0) then
-         w5 = 1d-11 * pow(L1/Lsun, 1.29d0) * pow(Y, 1.7d0) * sqrt(Z)
+         w5 = 1.5 * 1d-11 * pow(L1/Lsun, 1.29d0) * pow(Y, 1.7d0) * sqrt(Z)
          !print*, "Nugis & Lamers"
       else if (s% x_character_ctrl(1) == 'Bjorklund') then
          call eval_Bjorklund_wind(w5)
