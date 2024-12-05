@@ -40,6 +40,8 @@ pgstar_flag = .true.
 change_initial_Z = .true.
 ! value set in inlist_extra
 
+show_net_reactions_info = .true.
+
 / ! end of star_job namelist
 
 

@@ -188,7 +188,7 @@ Abundance_log_mass_frac_min = -3.5 ! only used if < 0
 
 Profile_Panels1_title = ''
 
-Profile_Panels1_xaxis_name = 'mass'
+Profile_Panels1_xaxis_name = 'logT'
 
 Profile_Panels1_xmin = 0d0 ! only used if /= -101d0
 Profile_Panels1_xmax = -101d0 ! only used if /= -101d0
