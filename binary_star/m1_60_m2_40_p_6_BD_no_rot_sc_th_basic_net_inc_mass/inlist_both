@@ -14,8 +14,8 @@ change_rotation_flag = .true.
 change_initial_rotation_flag = .true.
 new_rotation_flag = .true.
 
-change_v_flag = .false.
-new_v_flag = .false.
+change_v_flag = .true.
+new_v_flag = .true.
 
 set_initial_age = .true.
 initial_age = 0
@@ -66,7 +66,7 @@ use_superad_reduction = .true.
 
 ! to stop at C depletion
 x_logical_ctrl(2) = .true.
-max_model_number = 40000 ! if true above, and the binary detaches, this will be overwritten in run_star_extras.f90
+max_model_number = 60000 ! if true above, and the binary detaches, this will be overwritten in run_star_extras.f90
 redo_limit = 300
 
 !wind
