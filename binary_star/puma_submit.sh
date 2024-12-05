@@ -16,9 +16,9 @@
 export OMP_NUM_THREADS=16
 
 # Array of folder names
-folders=(m1_60_m2_40_p_6_BD_no_rot_sc_th_basic_net_inc_mass)
+folders=(m1_60_m2_40_p_6_BD_no_rot_sc_th_basic_net_low_z)
 
 # Navigate to the appropriate folder
 cd /groups/mrenzo/Neev/Projects/XRB/binary_star/${folders[$SLURM_ARRAY_TASK_ID]}
 ./clean && ./mk
-./re 40000
+./rn

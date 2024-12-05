@@ -41,6 +41,8 @@ change_initial_Z = .true.
 ! value set in inlist_extra
 
 show_net_reactions_info = .true.
+list_net_reactions = .true.
+show_net+species_info = .true.
 
 / ! end of star_job namelist
 
@@ -64,11 +66,11 @@ x_character_ctrl(2) = 'Decin' ! accretor mass in Msun
 
 
 hard_limit_for_rel_error_in_energy_conservation = -1d0
-use_superad_reduction = .true.
+use_superad_reduction = .false.
 
 ! to stop at C depletion
 x_logical_ctrl(2) = .true.
-max_model_number = 60000 ! if true above, and the binary detaches, this will be overwritten in run_star_extras.f90
+max_model_number = 50000 ! if true above, and the binary detaches, this will be overwritten in run_star_extras.f90
 redo_limit = 300
 
 !wind
