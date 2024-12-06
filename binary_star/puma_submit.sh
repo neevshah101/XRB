@@ -8,7 +8,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=16
 #SBATCH --time=72:00:00
-#SBATCH -o no_rot_sc_th_basic_net_inc_mass%A_%a.out
+#SBATCH -o no_rot_sc_th_basic_net_low_z%A_%a.out
 #SBATCH --array=0-0
 # --------------------
 ### Code Section
@@ -21,4 +21,4 @@ folders=(m1_60_m2_40_p_6_BD_no_rot_sc_th_basic_net_low_z)
 # Navigate to the appropriate folder
 cd /groups/mrenzo/Neev/Projects/XRB/binary_star/${folders[$SLURM_ARRAY_TASK_ID]}
 ./clean && ./mk
-./rn
+./re 12000

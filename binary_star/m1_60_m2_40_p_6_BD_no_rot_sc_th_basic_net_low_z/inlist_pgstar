@@ -210,13 +210,13 @@ Profile_Panels1_yaxis_name(2) = 'eps_nuc'
 
 
 Profile_Panels1_yaxis_name(3) = 'logL'
-Profile_Panels1_ymax(3) = 6.5
-Profile_Panels1_ymin(3) = 5.5
+Profile_Panels1_ymax(3) = 6.4
+Profile_Panels1_ymin(3) = 5.8
 !Profile_Panels1_dymin(3) = 6.5
 
 Profile_Panels1_other_yaxis_name(3) = 'log_Ledd' ! 'v_div_v_escape' ! 'mass'
-Profile_Panels1_other_ymax(3) = 6.5d0
-Profile_Panels1_other_ymin(3) = 5.5
+Profile_Panels1_other_ymax(3) = 6.4d0
+Profile_Panels1_other_ymin(3) = 5.8
 !Profile_Panels1_other_dymin(3) = 0.15
 
 show_TRho_Profile_kap_regions = .false.

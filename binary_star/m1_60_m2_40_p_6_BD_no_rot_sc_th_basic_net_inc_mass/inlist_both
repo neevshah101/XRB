@@ -14,8 +14,8 @@ change_rotation_flag = .true.
 change_initial_rotation_flag = .true.
 new_rotation_flag = .true.
 
-change_v_flag = .false.
-new_v_flag = .false.
+change_v_flag = .true.
+new_v_flag = .true.
 
 set_initial_age = .true.
 initial_age = 0
@@ -42,7 +42,7 @@ change_initial_Z = .true.
 
 show_net_reactions_info = .true.
 list_net_reactions = .true.
-show_net+species_info = .true.
+show_net_species_info = .true.
 
 / ! end of star_job namelist
 
@@ -66,7 +66,7 @@ x_character_ctrl(2) = 'Decin' ! accretor mass in Msun
 
 
 hard_limit_for_rel_error_in_energy_conservation = -1d0
-use_superad_reduction = .false.
+use_superad_reduction = .true.
 
 ! to stop at C depletion
 x_logical_ctrl(2) = .true.
@@ -209,5 +209,9 @@ min_D_mix=1d-2
 
 ! when_to_stop_rtol = 1d-2
 ! when_to_stop_atol = 1d-2
+
+!use_drag_energy = .false.
+!drag_coefficient = 999
+!min_q_for_drag = 0d0
 
 / ! end of controls namelist
