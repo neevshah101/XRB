@@ -64,7 +64,7 @@ x_character_ctrl(2) = 'Decin' ! accretor mass in Msun
 
 
 hard_limit_for_rel_error_in_energy_conservation = -1d0
-use_superad_reduction = .false.
+use_superad_reduction = .true.
 
 ! to stop at C depletion
 x_logical_ctrl(2) = .true.
@@ -157,10 +157,10 @@ star_history_txt_format = '(a32, 1x)'
 
 
 ! time step resolution on fuel depletion
-delta_lg_XH_cntr_limit = 0.05d0
+delta_lg_XH_cntr_limit = 0.01d0
 delta_lg_XH_cntr_max   = 0.0d0
 delta_lg_XH_cntr_min   = -4.0d0
-!delta_lg_XH_cntr_hard_limit = 0.02d0
+delta_lg_XH_cntr_hard_limit = 0.02d0
 delta_lg_XHe_cntr_limit = 0.01d0
 delta_lg_XHe_cntr_max   = 0.0d0
 delta_lg_XHe_cntr_min   = -4.0d0
@@ -190,8 +190,8 @@ delta_lgL_He_limit = 0.03d0
 delta_lgL_He_hard_limit = 0.05d0
 delta_HR_ds_Teff = 1d-5
 
-!delta_lgL_H_limit = 0.01d0
-!delta_lgL_H_hard_limit = 0.025d0
+delta_lgL_H_limit = 0.01d0
+delta_lgL_H_hard_limit = 0.025d0
 
 
 ! spatial increase resolution during He core burning
