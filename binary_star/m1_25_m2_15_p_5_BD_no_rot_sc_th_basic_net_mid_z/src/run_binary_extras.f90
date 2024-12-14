@@ -359,32 +359,32 @@ contains
        end if
     end if
     
-    ! ! if RLOF ended detach and switch to single star evolutuon
-    ! if (b% model_number == 26001) then 
-    !   if (b% s_donor% x_logical_ctrl(1) .eqv. .true.) then
-    !      print *, "****************************************"
-    !      print *, "* Switching from binary to single star *"
-    !      print *, "****************************************"
-    !      b% mtransfer_rate = 0d0
-    !      b% change_factor = b% max_change_factor
-    !      print *, "shutting down tides, accretion of J, magnetic braking, and missing wind"
-    !      b% do_tidal_sync = .false.
-    !      b% do_j_accretion = .false.
-    !      b% do_jdot_mb = .false.
-    !      b% do_jdot_missing_wind = .false.
-    !      print *, "ignore RLOF from now on"
-    !      b% ignore_rlof_flag = .true.
-    !      print *, "If this is a failed SN you can calculate the new e and P and set them here"
-    !      print *, "to avoid case BB, we set the period and separation to something very large"
-    !      call binary_set_separation_eccentricity(binary_id, 1d99, 0d0, ierr)
-    !      if (ierr /= 0) return
-    !      b% ignore_hard_limits_this_step = .true.
-    !      print *, "----------------------------------------"
-    !      print *, "new period, separation, Jorb, and eccentricity"
-    !      print *, b% period, b% separation, b% angular_momentum_j, b% eccentricity
-    !      print *, "----------------------------------------"
-    !   end if
-    ! end if
+    ! if RLOF ended detach and switch to single star evolutuon
+    if (b% model_number == 14001) then 
+      if (b% s_donor% x_logical_ctrl(1) .eqv. .true.) then
+         print *, "****************************************"
+         print *, "* Switching from binary to single star *"
+         print *, "****************************************"
+         b% mtransfer_rate = 0d0
+         b% change_factor = b% max_change_factor
+         print *, "shutting down tides, accretion of J, magnetic braking, and missing wind"
+         b% do_tidal_sync = .false.
+         b% do_j_accretion = .false.
+         b% do_jdot_mb = .false.
+         b% do_jdot_missing_wind = .false.
+         print *, "ignore RLOF from now on"
+         b% ignore_rlof_flag = .true.
+         print *, "If this is a failed SN you can calculate the new e and P and set them here"
+         print *, "to avoid case BB, we set the period and separation to something very large"
+         call binary_set_separation_eccentricity(binary_id, 1d99, 0d0, ierr)
+         if (ierr /= 0) return
+         b% ignore_hard_limits_this_step = .true.
+         print *, "----------------------------------------"
+         print *, "new period, separation, Jorb, and eccentricity"
+         print *, b% period, b% separation, b% angular_momentum_j, b% eccentricity
+         print *, "----------------------------------------"
+      end if
+    end if
 
     ! ! if RLOF ended detach and switch to single star evolutuon
     ! if ((b% lxtra(2) .eqv. .true.) .and. &   ! RLOF has started before
