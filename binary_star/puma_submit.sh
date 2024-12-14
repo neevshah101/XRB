@@ -21,4 +21,4 @@ folders=(m1_25_m2_15_p_5_BD_no_rot_sc_th_basic_net_mid_z)
 # Navigate to the appropriate folder
 cd /groups/mrenzo/Neev/Projects/XRB/binary_star/${folders[$SLURM_ARRAY_TASK_ID]}
 ./clean && ./mk
-./rn
+./re 7000
