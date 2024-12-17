@@ -208,4 +208,7 @@ min_D_mix=1d-2
 ! when_to_stop_rtol = 1d-2
 ! when_to_stop_atol = 1d-2
 
+report_solver_progress = .true. ! set true to see info about newton iterations
+report_ierr = .true. ! if true, produce terminal output when have some internal error
+
 / ! end of controls namelist
