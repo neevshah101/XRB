@@ -188,10 +188,10 @@ Abundance_log_mass_frac_min = -3.5 ! only used if < 0
 
 Profile_Panels1_title = ''
 
-Profile_Panels1_xaxis_name = 'logT'
+Profile_Panels1_xaxis_name = 'zone' !'logT'
 
-Profile_Panels1_xmin = 4 ! only used if /= -101d0
-Profile_Panels1_xmax = 8.5 ! only used if /= -101d0
+Profile_Panels1_xmin = 0!0 ! only used if /= -101d0
+Profile_Panels1_xmax = 400!8.5 ! only used if /= -101d0
 Profile_Panels1_num_panels = 3
 
 Profile_Panels1_yaxis_name(1) = 'log_opacity'
@@ -212,12 +212,12 @@ Profile_Panels1_other_dymin(2) = 0.5
 
 Profile_Panels1_yaxis_name(3) = 'logL'
 Profile_Panels1_ymax(3) = 6.
-Profile_Panels1_ymin(3) = 4.9
+Profile_Panels1_ymin(3) = 5.5
 !Profile_Panels1_dymin(3) = 6.5
 
 Profile_Panels1_other_yaxis_name(3) = 'log_Ledd' ! 'v_div_v_escape' ! 'mass'
 Profile_Panels1_other_ymax(3) = 6.d0
-Profile_Panels1_other_ymin(3) = 4.d0
+Profile_Panels1_other_ymin(3) = 5.d0
 !Profile_Panels1_other_dymin(3) = 0.15
 
 show_TRho_Profile_kap_regions = .false.

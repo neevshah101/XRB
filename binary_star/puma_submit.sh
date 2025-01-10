@@ -8,7 +8,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=16
 #SBATCH --time=72:00:00
-#SBATCH -o no_rot_sc_th_basic_net_mid_z_40_25_5_%A_%a.out
+#SBATCH -o no_rot_sc_th_basic_net_40_25_5_z_0100_debug_%A_%a.out
 #SBATCH --array=0-0
 # --------------------
 ### Code Section
@@ -16,9 +16,9 @@
 export OMP_NUM_THREADS=16
 
 # Array of folder names
-folders=(m1_40_m2_25_p_5_BD_no_rot_sc_th_basic_net_mid_z)
+folders=(m1_40_m2_25_p_5_BD_no_rot_sc_th_basic_net_z_0100)
 
 # Navigate to the appropriate folder
 cd /groups/mrenzo/Neev/Projects/XRB/binary_star/${folders[$SLURM_ARRAY_TASK_ID]}
 ./clean && ./mk
-./rn
+./re 21000
