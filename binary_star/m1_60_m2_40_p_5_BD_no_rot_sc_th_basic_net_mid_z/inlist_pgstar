@@ -5,7 +5,7 @@ pgstar_interval = 10
 Grid2_win_flag = .true.
 
 Grid2_file_flag = .true.
-Grid2_file_dir = 'png'
+Grid2_file_dir = 'png_amlt_4.0'
 Grid2_file_interval = 100 ! 1 ! output when mod(model_number,Grid2_file_interval)==0
 Grid2_file_width = -1 ! negative means use same value as for window
 Grid2_file_aspect_ratio = -1 ! negative means use same value as for window

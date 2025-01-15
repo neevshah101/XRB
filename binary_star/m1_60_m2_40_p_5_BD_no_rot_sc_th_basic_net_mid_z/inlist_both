@@ -68,7 +68,7 @@ use_superad_reduction = .true.
 
 ! to stop at C depletion
 x_logical_ctrl(2) = .true.
-max_model_number = 60000 ! if true above, and the binary detaches, this will be overwritten in run_star_extras.f90
+max_model_number = 120000 ! if true above, and the binary detaches, this will be overwritten in run_star_extras.f90
 redo_limit = 300
 
 !wind
@@ -81,7 +81,7 @@ mdot_omega_power = 0.43d0
 
 ! mixing
 use_ledoux_criterion = .true.
-mixing_length_alpha = 1.5d0
+mixing_length_alpha = 4.0d0 !1.5d0
 alpha_semiconvection = 0.0d0 !1.0d0 !1.0d0
 thermohaline_coeff = 0.0d0 !1.0d0 !1.0d0
 ! thermohaline_option = 'Brown_Garaud_Stellmach_13'
