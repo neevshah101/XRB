@@ -35,7 +35,7 @@ implicit_scheme_tiny_factor = 1d-6
 write_header_frequency = 1
 history_interval = 1
 
-do_tidal_sync = .true.
+do_tidal_sync = .false.
 do_j_accretion = .false. ! if .true. use A.3.3 of de Mink et al. 2013, ApJ, 764, 166
 ! be 100% sure MB is always off
 do_jdot_mb = .false.
@@ -79,8 +79,8 @@ Ftid_1 = 1
 sync_mode_2 = "Uniform"
 sync_type_2 = "Hut_rad"
 Ftid_2 = 1
-do_initial_orbit_sync_1 = .true.
-do_initial_orbit_sync_2 = .true.
+do_initial_orbit_sync_1 = .false.
+do_initial_orbit_sync_2 = .false.
 
 accretor_overflow_terminate = 2d0
 
