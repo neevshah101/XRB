@@ -58,6 +58,9 @@ use_Type2_opacities = .true.
 
 &controls
 
+!detach accretor after helium depletion
+x_logical_ctrl(1) = .true.
+
 use_other_wind = .true.
 x_character_ctrl(1) = 'Bjorklund' ! donor mass in Msun
 x_character_ctrl(2) = 'Decin' ! accretor mass in Msun

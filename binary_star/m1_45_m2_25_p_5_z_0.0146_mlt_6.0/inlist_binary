@@ -9,6 +9,9 @@ evolve_both_stars = .true.
 
 &binary_controls
 
+!resuming before helium depletion to detach accretor post helium depletion
+!lxtra(4) = .true.
+
 m1 = 45 ! donor mass in Msun
 m2 = 25 ! accretor mass in Msun
 initial_period_in_days = 5

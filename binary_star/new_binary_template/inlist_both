@@ -58,6 +58,9 @@ use_Type2_opacities = .true.
 
 &controls
 
+!detach accretor after helium depletion
+x_logical_ctrl(1) = .true.
+
 use_other_wind = .true.
 x_character_ctrl(1) = 'Bjorklund' ! donor mass in Msun
 x_character_ctrl(2) = 'Decin' ! accretor mass in Msun
@@ -82,8 +85,8 @@ mdot_omega_power = 0.43d0
 ! mixing
 use_ledoux_criterion = .true.
 mixing_length_alpha = 2.0d0 !1.5d0
-alpha_semiconvection = 0.0d0 !1.0d0 !1.0d0
-thermohaline_coeff = 0.0d0 !1.0d0 !1.0d0
+alpha_semiconvection = 1.0d0 !1.0d0
+thermohaline_coeff = 1.0d0 !1.0d0
 ! thermohaline_option = 'Brown_Garaud_Stellmach_13'
 
 ! overshoot controls

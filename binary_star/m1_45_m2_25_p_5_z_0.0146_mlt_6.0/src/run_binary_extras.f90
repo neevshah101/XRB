@@ -386,6 +386,65 @@ contains
 !      end if
 !    end if
 
+!Detaching Accretor after Donor Helium depletion
+
+if ((b% s1% center_h1 < 1.0d-4) .and. (b% s1% center_he4 < 1.0d-4)) then
+    print *, "yes"
+end if
+
+if ((b% s1% center_h1 < 1.0d-4) .and. (b% s1% center_he4 > 1.0d-4)) then
+    print *, "no"
+end if
+
+if ((b% s1% center_h1 < 1.0d-4) .and. (b% s1% x_logical_ctrl(1) .eqv. .true.) .and. (b% s1% center_he4 < 1.0d-4)) then
+    print *, "save models after RLOF"
+    write(fname, fmt="(a18)") 'donor_postRLOF.mod'
+    call star_write_model(b% star_ids(1), fname, ierr)
+!    if (ierr /= 0) return
+    write(fname, fmt="(a21)") 'accretor_postRLOF.mod'
+    call star_write_model(b% star_ids(2), fname, ierr)
+    b% s_donor% x_logical_ctrl(1) = .false. ! so we dont' get back in here
+!    if (ierr /= 0) return
+    print *, "****************************************"
+    print *, "* Switching from binary to single star *"
+    print *, "****************************************"
+    b% job% evolve_both_stars = .false.
+    ! fix Eddington mdot stuff
+    b% eq_initial_bh_mass = b% s_donor% m(1)
+    b% mdot_edd = 1d99
+    b% mdot_edd_eta = 0d0
+    ! switch donor and accretor
+    b% d_i = 2
+    b% a_i = 1
+    ! switch pointers
+    b% s_donor => b% s2
+    b% s_accretor => b% s1
+    ! set point mass index
+    b% point_mass_i = 1
+    ! set the mass transfer
+    print *, "current mtransfer_rate", b% mtransfer_rate, "set to zero"
+    b% mtransfer_rate = 0d0
+    b% change_factor = b% max_change_factor
+    print *, "shutting down tides, accretion of J, magnetic braking, and missing wind"
+    b% do_tidal_sync = .false.
+    b% do_j_accretion = .false.
+    b% do_jdot_mb = .false.
+    b% do_jdot_missing_wind = .false.
+    print *, "ignore RLOF from now on"
+    b% ignore_rlof_flag = .true.
+    print *, "If this is a failed SN you can calculate the new e and P and set them here"
+    print *, "to avoid case BB, we set the period and separation to something very large"
+    call binary_set_separation_eccentricity(binary_id, 1d99, 0d0, ierr)
+!    if (ierr /= 0) return
+    b% ignore_hard_limits_this_step = .true.
+    print *, "----------------------------------------"
+    print *, "new period, separation, Jorb, and eccentricity"
+    print *, b% period, b% separation, b% angular_momentum_j, b% eccentricity
+    print *, "----------------------------------------"
+
+end if
+
+
     ! ! if RLOF ended detach and switch to single star evolutuon
     ! if ((b% lxtra(2) .eqv. .true.) .and. &   ! RLOF has started before
     !     (b% rl_relative_gap(1) < 0) .and. & ! donor is detached
